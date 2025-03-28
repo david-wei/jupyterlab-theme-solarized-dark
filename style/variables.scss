@@ -51,6 +51,32 @@ $solarized-base015: color.mix($solarized-base02, $solarized-base01, 80%);
 $solarized-base025: color.mix($solarized-base03, $solarized-base02, 50%);
 
 :root {
+  /* Atom one dark colours (adjusted for higher contrast) */
+  --one-dark-cyan: #51b6c3;
+  --one-dark-blue: #5daef2;
+  --one-dark-red-1: #e26b73;
+  --one-dark-mono-1: #abb2c0;
+  --one-dark-mono-2: #828997;
+  --one-dark-silver: #aaa;
+  --one-dark-purple: #c775df;
+  --one-dark-orange-2: #e6c176;
+  --one-dark-gutter: #666d7a;
+  --one-dark-fg: #abb2bf;
+  --one-dark-green: #97c475;
+  --one-dark-red-2: #be5046;
+  --one-dark-orange-1: #d29b62;
+  --one-dark-mono-3: #495163;
+  --one-dark-accent: #aeb9f5;
+  --one-dark-bg-1: #21252b;
+  --one-dark-bg-2: #282c34;
+  --one-dark-gray-1: #3e4451;
+  --one-dark-gray-2: #4e576a;
+  --one-dark-gray-3: #555e73;
+  --one-dark-button-gray: #7f848e;
+  --one-dark-comment-gray: #7f848e;
+  --one-dark-off-white: #eee;
+
+
   /* Elevation
    *
    * We style box-shadows using Material Design's idea of elevation. These particular numbers are taken from here:
@@ -186,7 +212,7 @@ $solarized-base025: color.mix($solarized-base03, $solarized-base02, 50%);
   --jp-content-heading-margin-bottom: 0.8em;
   --jp-content-heading-font-weight: 500;
   --jp-content-font-color0: #{$solarized-base2};
-  --jp-content-font-color1: #{$solarized-base1};
+  --jp-content-font-color1: var(--one-dark-fg); /*#{$solarized-base1};*/
   --jp-content-font-color2: #{$solarized-base0};
   --jp-content-font-color3: #{$solarized-base00};
   --jp-content-link-color: #{$solarized-blue};
@@ -203,7 +229,7 @@ $solarized-base025: color.mix($solarized-base03, $solarized-base02, 50%);
   --jp-code-font-size: 13px;
   --jp-code-line-height: 1.3077; /* 17px for 13px base */
   --jp-code-padding: 5px; /* 5px for 13px base, codemirror highlighting needs integer px value */
-  --jp-code-font-family-default: menlo, consolas, 'DejaVu Sans Mono', monospace;
+  --jp-code-font-family-default: 'JetBrains Mono', menlo, consolas, 'DejaVu Sans Mono', monospace;
   --jp-code-font-family: var(--jp-code-font-family-default);
 
   /* This gives a magnification of about 125% in presentation mode over normal. */
@@ -288,7 +314,7 @@ $solarized-base025: color.mix($solarized-base03, $solarized-base02, 50%);
     )};
   --jp-cell-editor-active-border-color: var(--jp-input-active-border-color);
   --jp-cell-prompt-width: 64px;
-  --jp-cell-prompt-font-family: 'Source Code Pro', monospace;
+  --jp-cell-prompt-font-family: 'JetBrains Mono', 'Source Code Pro', monospace;
   --jp-cell-prompt-letter-spacing: 0;
   --jp-cell-prompt-opacity: 1;
   --jp-cell-prompt-not-active-opacity: 1;
@@ -369,34 +395,30 @@ $solarized-base025: color.mix($solarized-base03, $solarized-base02, 50%);
 
   /* Code mirror specific styles */
 
-  --jp-mirror-editor-keyword-color: #{$solarized-green};
-  --jp-mirror-editor-atom-color: #{$solarized-blue};
-  --jp-mirror-editor-number-color: #{$solarized-magenta};
-  --jp-mirror-editor-def-color: #{$solarized-blue};
-  --jp-mirror-editor-variable-color: #{$solarized-base0};
-  --jp-mirror-editor-variable-2-color: #{$solarized-base00};
-  --jp-mirror-editor-variable-3-color: #{$solarized-base01};
-  --jp-mirror-editor-punctuation-color: #{$solarized-base0};
-  --jp-mirror-editor-property-color: #{$solarized-blue};
-  --jp-mirror-editor-operator-color: #{$solarized-base0};
-  --jp-mirror-editor-comment-color: #{$solarized-base01};
-  --jp-mirror-editor-string-color: #{$solarized-cyan};
-  --jp-mirror-editor-string-2-color: #{$solarized-orange};
-  --jp-mirror-editor-meta-color: #{$solarized-magenta};
-  --jp-mirror-editor-qualifier-color: #555;
-  --jp-mirror-editor-builtin-color: #{$solarized-green};
-  --jp-mirror-editor-bracket-color: #997;
-  --jp-mirror-editor-tag-color: #{$solarized-green};
-  --jp-mirror-editor-attribute-color: #{$solarized-blue};
-  --jp-mirror-editor-header-color: #{color.mix(
-      $solarized-blue,
-      $solarized-base2,
-      90%
-    )};
-  --jp-mirror-editor-quote-color: #{$solarized-cyan};
-  --jp-mirror-editor-link-color: #{$solarized-blue};
-  --jp-mirror-editor-error-color: #{$solarized-red};
-  --jp-mirror-editor-hr-color: #999;
+  --jp-mirror-editor-keyword-color: var(--one-dark-purple);
+  --jp-mirror-editor-atom-color: var(--one-dark-off-white);
+  --jp-mirror-editor-number-color: var(--one-dark-orange-1);
+  --jp-mirror-editor-def-color: var(--one-dark-red-1);
+  --jp-mirror-editor-variable-color: var(--one-dark-mono-1);
+  --jp-mirror-editor-variable-2-color: var(--one-dark-orange-2);
+  --jp-mirror-editor-variable-3-color: var(--one-dark-purple);
+  --jp-mirror-editor-punctuation-color: var(--one-dark-mono-1);
+  --jp-mirror-editor-property-color: var(--one-dark-blue);
+  --jp-mirror-editor-operator-color: var(--one-dark-cyan);
+  --jp-mirror-editor-comment-color: var(--one-dark-comment-gray);
+  --jp-mirror-editor-string-color: var(--one-dark-green);
+  --jp-mirror-editor-string-2-color: var(--one-dark-red-1);
+  --jp-mirror-editor-meta-color: var(--one-dark-cyan);
+  --jp-mirror-editor-qualifier-color: var(--one-dark-accent);
+  --jp-mirror-editor-builtin-color: var(--one-dark-cyan);
+  --jp-mirror-editor-bracket-color: var(--one-dark-mono-1);
+  --jp-mirror-editor-tag-color: var(--one-dark-red-1);
+  --jp-mirror-editor-attribute-color: var(--one-dark-red-1);
+  --jp-mirror-editor-header-color: var(--one-dark-blue);
+  --jp-mirror-editor-quote-color: var(--one-dark-green);
+  --jp-mirror-editor-link-color: var(--one-dark-red-1);
+  --jp-mirror-editor-error-color: var(--one-dark-red-1);
+  --jp-mirror-editor-hr-color: var(--one-dark-mono-1);
 
   /* User colors */
 
